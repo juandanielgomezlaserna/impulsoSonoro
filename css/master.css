@@ -15,6 +15,8 @@
 }
 
 body{
+    background: url(../img/fondo.png) no-repeat center;
+    background-size: 2000px;
     background-color: #141414;
 }
 
@@ -54,16 +56,21 @@ header{
 }
 
 section.novedad{
-    margin-top: 3rem;
+    display: flex;
+    height: 85vh;
+    width: 100%;
+    align-items: end;
     div{
-        height: 758px;
+        height: 100%;
+        width: 100%;
         background: url(../img/img-1.svg) no-repeat center;
+        background-position: bottom;
         display: flex;
         align-items: end;
         justify-content: center;
         animation: entrada 1s ease-in;
         button{
-            margin-bottom: 100px;
+            margin-bottom: 50px;
             background-color: #BD9519;
             border-radius: 20px;
             color: #141414;
@@ -164,6 +171,10 @@ section.funciones{
         background-color: transparent;
     }
 }
+
+@media (max-width: 480px) {
+    
+  }
 
 .titulo-h{
     color: #BD9519;

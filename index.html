@@ -11,84 +11,12 @@
         <header>
             <img class="logo" src="./img/logo.svg" alt="">
             <hr class="linea">
-            <div class="sections">
-                <a class="titulo-h" href="#funciones">FUNCIONES</a>
-                <a class="titulo-h" href="#talentos">TALENTOS</a>
-                <a class="titulo-h" href="#nosotros">NOSOTROS</a>
-                <a class="titulo-h" href="#contacto">CONTACTO</a>
-            </div>
         </header> 
         <section class="novedad">
             <div>
                 <button>MÁS INFO</button>
             </div>
         </section>
-        <section class="funciones">
-            <div class="titulo">
-                <h2 class="titulo-h">FUNCIONES</h2>
-                <hr class="linea">
-            </div>
-            <div class="carrusel">
-                <div class="imagenes">
-                    <div class="img-1"></div>
-                    <div class="img-2"></div>
-                    <div class="img-3"></div>
-                    <div class="img-3"></div>
-                    <div class="img-3"></div>
-                </div>
-            </div>
-            <button class="arrow-rigth"><img src="./img/arrow-right.svg" alt=""></button>
-        </section>
     </main>
-    <script>
-        const carrusel = document.querySelector('.imagenes');
-        const images = document.querySelectorAll('.imagenes > div');
-        const buttonRight = document.querySelector('.arrow-rigth');
-
-        let index = 0; // Índice de la imagen actual
-        const imageWidth = 465; // Desplazamiento fijo en píxeles
-
-        // Clonar elementos para efecto infinito
-        const firstClone = images[0].cloneNode(true);
-        const lastClone = images[images.length - 1].cloneNode(true);
-
-        carrusel.appendChild(firstClone); // Agregar el primer elemento al final
-        carrusel.insertBefore(lastClone, images[0]); // Agregar el último elemento al inicio
-
-        // Ajustar la posición inicial para mostrar correctamente el primer elemento
-        carrusel.style.transform = `translateX(-${imageWidth}px)`;
-
-        // Avanzar a la derecha
-        buttonRight.addEventListener('click', () => {
-            index++;
-            carrusel.style.transition = 'transform 0.5s ease-in-out';
-            carrusel.style.transform = `translateX(-${(index + 1) * imageWidth}px)`;
-
-            // Si llegamos al final, salta al inicio después de la transición
-            if (index >= images.length) {
-                setTimeout(() => {
-                    carrusel.style.transition = 'none'; // Desactiva la animación
-                    index = 0; // Reinicia el índice
-                    carrusel.style.transform = `translateX(-${imageWidth}px)`; // Vuelve al primer elemento
-                }, 500); // Tiempo igual a la duración de la transición
-            }
-        });
-
-        // Retroceder a la izquierda
-        buttonLeft.addEventListener('click', () => {
-            index--;
-            carrusel.style.transition = 'transform 0.5s ease-in-out';
-            carrusel.style.transform = `translateX(-${(index + 1) * imageWidth}px)`;
-
-            // Si llegamos al principio, salta al final después de la transición
-            if (index < 0) {
-                setTimeout(() => {
-                    carrusel.style.transition = 'none'; // Desactiva la animación
-                    index = images.length - 1; // Mueve el índice al último elemento
-                    carrusel.style.transform = `translateX(-${(index + 1) * imageWidth}px)`; // Mueve al último elemento
-                }, 500); // Tiempo igual a la duración de la transición
-            }
-        });
-    </script>
 </body>
 </html>
