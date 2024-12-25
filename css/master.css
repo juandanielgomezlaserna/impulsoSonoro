@@ -69,19 +69,21 @@ section.novedad{
         align-items: end;
         justify-content: center;
         animation: entrada 1s ease-in;
-        button{
+        a{
             margin-bottom: 50px;
             background-color: #BD9519;
             border-radius: 20px;
             color: #141414;
             text-align: center;
-            padding: 10px;
             border: none;
             width: 190px;
             height: 55px;
             font-size: 20px;
             cursor: pointer;
             transition: 0.1s all ease-in;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             &:hover{
                 transform: scale(1.05);
                 background-color: #ebcb4c;
@@ -173,7 +175,12 @@ section.funciones{
 }
 
 @media (max-width: 480px) {
-    
+    section.novedad{
+        div{
+            background-size: 100%;
+            background-position: center;
+        }
+    }
   }
 
 .titulo-h{
