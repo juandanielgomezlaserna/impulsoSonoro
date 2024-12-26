@@ -25,7 +25,7 @@
                 <hr class="linea">
             </div>
             <div>
-                <img src="./img/cabaret/img-1.svg" alt="">
+                <img src="./img/cabaret/elcabaret.png" alt="">
                 <div>
                     <p>
                         Cabaret Pasiones de Mujer, cuenta la historia de personajes que han sido juzgados de manera intrínseca a lo largo de su vida, cuenta con esos mitos que se desvanecen cuando nos acercamos en el siglo XXI. Las declaraciones de sus personajes sin distinción, procuran la ternura y la empatía social genuina, vinculando elementos sensuales, cómicos, y musicales. 
@@ -40,6 +40,56 @@
                 </div>
             </div>
         </section>
+        <section class="imagenes">
+            <div class="titulo-div">
+                <h2 class="titulo-h">IMÁGENES</h2>
+                <hr class="linea">
+            </div>
+            <div class="carrusel">
+                <img class="imagen-carrusel" src="./img/cabaret/carrusel1/1.png" alt="">
+                <div class="buttons">
+                    <button class="arrow-left"></button>
+                    <button class="arrow-right"></button>
+                </div>
+            </div>
+        </section>
     </main>
+    <script>
+        let contadorImagen = 1
+        const maxCantidadImagen = 5
+        const imagenCarrusel = document.querySelector(".imagen-carrusel")
+        const leftArrow = document.querySelector(".arrow-left")
+        const rightArrow = document.querySelector(".arrow-right")
+
+        rightArrow.addEventListener("click", function () {
+            if (contadorImagen < maxCantidadImagen) {
+                contadorImagen++    
+                imagenCarrusel.src = "./img/cabaret/carrusel1/" + contadorImagen + ".png"
+            }
+            if (contadorImagen > 1) {
+                leftArrow.style.filter = "brightness(100%)"
+                leftArrow.style.cursor = "pointer"
+            }
+            if (contadorImagen == maxCantidadImagen) {
+                rightArrow.style.filter = "brightness(50%)"
+                rightArrow.style.cursor = "no-drop"
+            }
+        })
+
+        leftArrow.addEventListener("click", function () {
+            if (contadorImagen > 1) {
+                contadorImagen--    
+                imagenCarrusel.src = "./img/cabaret/carrusel1/" + contadorImagen + ".png"
+            }
+            if (contadorImagen < maxCantidadImagen) {
+                rightArrow.style.filter = "brightness(100%)"
+                rightArrow.style.cursor = "pointer"
+            }
+            if (contadorImagen == 1) {
+                leftArrow.style.filter = "brightness(50%)"
+                leftArrow.style.cursor = "no-drop"
+            }
+        })
+    </script>
 </body>
 </html>
