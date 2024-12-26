@@ -176,10 +176,18 @@ section.funciones{
 }
 
 @media (max-width: 480px) {
+    header{
+        gap: 0;
+        margin-bottom: 20px;
+        img.logo{
+            width: 40%;
+        }
+    }
     section.novedad{
         div{
+            background: url(../img/img-1-phone.png) no-repeat center;
             background-size: 100%;
-            background-position: center;
+            background-position: bottom;
         }
     }
 }
