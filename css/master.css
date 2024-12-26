@@ -184,6 +184,9 @@ section.funciones{
             width: 40%;
         }
     }
+    section.novedad{
+        display: none;
+    }
 }
 
 
