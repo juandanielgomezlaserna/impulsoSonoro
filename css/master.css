@@ -179,6 +179,7 @@ section.funciones{
     header{
         gap: 0;
         margin-bottom: 20px;
+        padding-top: 0;
         img.logo{
             width: 40%;
         }
