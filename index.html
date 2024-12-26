@@ -14,7 +14,7 @@
         </header> 
         <section class="novedad">
             <div>
-                <img class="img-novedad" src="./img/img-1.png" alt="">
+                <img class="img-novedad" src="" alt="">
                 <a href="./funciones/cabaret.html">MÁS INFO</a>
             </div>
         </section>
@@ -26,6 +26,9 @@
         if (window.innerWidth <= 480) {
             imgNovedad.src = "./img/img-1-phone.png"
             imgNovedad.style.width = "100%"
+        }else{
+            imgNovedad.src = "./img/img-1.png"
+            imgNovedad.style.width = "auto"
         }
 
         function handleMediaQueryChange(e) {
