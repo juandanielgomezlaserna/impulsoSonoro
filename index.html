@@ -21,9 +21,11 @@
     </main>
     <script>
         const imgNovedad = document.querySelector(".img-novedad")
-        const mediaQuery = window.matchMedia('(max-width: 480px)');
+        const mediaQuery = window.matchMedia('(max-width: 800px)');
 
-        if (window.innerWidth <= 480) {
+        alert(window.innerWidth)
+
+        if (window.innerWidth <= 800) {
             imgNovedad.src = "./img/img-1-phone.png"
             imgNovedad.style.width = "100%"
         }else{
