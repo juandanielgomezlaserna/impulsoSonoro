@@ -23,14 +23,14 @@
         const imgNovedad = document.querySelector(".img-novedad")
         const mediaQuery = window.matchMedia('(max-width: 800px)');
 
-        alert(window.innerWidth)
-
         if (window.innerWidth <= 800) {
             imgNovedad.src = "./img/img-1-phone.png"
             imgNovedad.style.width = "100%"
+            imgNovedad.zIndex = "100"
         }else{
             imgNovedad.src = "./img/img-1.png"
             imgNovedad.style.width = "auto"
+            imgNovedad.zIndex = "100"
         }
 
         function handleMediaQueryChange(e) {
