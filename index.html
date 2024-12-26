@@ -23,12 +23,9 @@
         const imgNovedad = document.querySelector(".img-novedad")
         const mediaQuery = window.matchMedia('(max-width: 480px)');
 
-        function obtenerAnchoMaximo() {
-            return Math.max(
-                window.innerWidth,
-                document.documentElement.clientWidth,
-                document.body.clientWidth
-            );
+        if (window.innerWidth <= 480) {
+            imgNovedad.src = "./img/img-1-phone.png"
+            imgNovedad.style.width = "100%"
         }
 
         function handleMediaQueryChange(e) {
