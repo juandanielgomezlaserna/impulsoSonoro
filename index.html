@@ -14,9 +14,35 @@
         </header> 
         <section class="novedad">
             <div>
+                <img class="img-novedad" src="./img/img-1.png" alt="">
                 <a href="./funciones/cabaret.html">MÁS INFO</a>
             </div>
         </section>
     </main>
+    <script>
+        const imgNovedad = document.querySelector(".img-novedad")
+        const mediaQuery = window.matchMedia('(max-width: 480px)');
+
+        function obtenerAnchoMaximo() {
+            return Math.max(
+                window.innerWidth,
+                document.documentElement.clientWidth,
+                document.body.clientWidth
+            );
+        }
+
+        function handleMediaQueryChange(e) {
+            if (e.matches) { 
+                imgNovedad.src = "./img/img-1-phone.png"
+                imgNovedad.style.width = "100%"
+            }else{
+                imgNovedad.src = "./img/img-1.png"
+                imgNovedad.style.width = "auto"
+            }
+        }
+
+        mediaQuery.addListener(handleMediaQueryChange);
+
+    </script>
 </body>
 </html>
