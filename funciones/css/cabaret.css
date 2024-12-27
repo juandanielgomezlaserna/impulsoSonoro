@@ -122,8 +122,94 @@ section.imagenes{
     }
 }
 
+section.actores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+    div.titulo-div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 0;
+        h2{
+            align-self: self-start;
+            font-size: 43px;
+            width: 20%;
+            text-align: center;
+        }
+        hr.titulo{
+            width: 80%;
+            height: 2px;
+        }
+    }
+    div.carrusel-actores{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        div.actor{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            box-shadow: 0 0 20px 0px #D3B543;
+            border: 2px solid #D3B543;
+            border-radius:0 42px 42px 0;
+            margin-top: 20px;
+            gap: 20px;
+            div.imagen{
+                width: 100%;
+                img{
+                    width: 100%;
+                }
+            }
+            div.info{
+                display: flex;
+                flex-direction: column;
+                padding: 1rem;
+                h2{
+                    font-size: 68px;
+                    color: #D9D9D9;
+                }
+                p{
+                    color: #D9D9D9;
+                    font-size: 22px;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+    div.buttons{
+        margin-top: 20px;
+        width: 90%;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        gap: 10px;
+        button{
+            width: 58px;
+            height: 58px;
+            background-color: transparent;
+            border: transparent;
+            cursor: pointer;
+        }
+        button.arrow-left-actor{
+            background: url(../../img/arrow-left.svg);
+            filter: brightness(50%);
+            cursor: no-drop;
+        }
+        button.arrow-right-actor{
+            background: url(../../img/arrow-right.svg);
+        }
+    }
+}
+
 @media (max-width: 960px) {
     section.cabaret{
+        margin-top: 3rem;
         div.titulo-div{
             flex-direction: column;
             align-items: center;
@@ -176,11 +262,52 @@ section.imagenes{
             }
         }
     }
+    section.actores{
+        margin-top: 20px;
+        div.titulo-div{
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 10px;
+            h2{
+                width: 100%;
+                font-size: 35px;
+                text-align: center;
+            }
+        }
+        div.carrusel-actores{
+            div.actor{
+                padding: 0;
+                div.imagen{
+                    padding: 0;
+                    width: 50%;
+                    img{
+                        width: 100%;
+                    }
+                }
+                div.info{
+                    width: 60%;
+                    padding: 1rem;
+                    gap: 10px;
+                    h2{
+                        font-size: 35px;
+                    }
+                    p{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        div.buttons{
+            justify-content: center;
+        }
+    }
 }
 
 @media (max-width: 480px) {
     section.cabaret{
-        margin-top: 5rem;
+        margin-top: 2rem;
         div.titulo-div{
             width: 100%;
             flex-direction: column;
@@ -202,6 +329,47 @@ section.imagenes{
                 width: 100%;
                 gap: 30px;
             }
+        }
+    }
+    section.actores{
+        margin-top: 20px;
+        div.titulo-div{
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 10px;
+            h2{
+                width: 100%;
+                font-size: 35px;
+                text-align: center;
+            }
+        }
+        div.carrusel-actores{
+            div.actor{
+                padding: 0;
+                div.imagen{
+                    padding: 0;
+                    width: 50%;
+                    img{
+                        width: 100%;
+                    }
+                }
+                div.info{
+                    width: 60%;
+                    padding: 1rem;
+                    gap: 10px;
+                    h2{
+                        font-size: 21px;
+                    }
+                    p{
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+        div.buttons{
+            justify-content: center;
         }
     }
     
