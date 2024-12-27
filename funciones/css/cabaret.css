@@ -140,6 +140,8 @@ section.imagenes{
             display: flex;
             flex-direction: column;
             gap: 20px;
+            justify-content: center;
+            align-items: center;
             img{
                 width: 100%;
             }

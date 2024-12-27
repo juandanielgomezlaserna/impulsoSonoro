@@ -46,7 +46,7 @@
                 <hr class="linea">
             </div>
             <div class="carrusel">
-                <img class="imagen-carrusel" src="./img/cabaret/carrusel1/1.png" alt="">
+                <img class="imagen-carrusel" src="https://i.postimg.cc/NMfL7cY2/1.png" alt="">
                 <div class="buttons">
                     <button class="arrow-left"></button>
                     <button class="arrow-right"></button>
@@ -60,11 +60,17 @@
         const imagenCarrusel = document.querySelector(".imagen-carrusel")
         const leftArrow = document.querySelector(".arrow-left")
         const rightArrow = document.querySelector(".arrow-right")
+        const carrusel = ["https://i.postimg.cc/NMfL7cY2/1.png",
+                        "https://i.postimg.cc/Wzd3Cwd2/2.png",
+                        "https://i.postimg.cc/Lsv8sbf9/3.png",
+                        "https://i.postimg.cc/CKwKSgRr/4.png",
+                        "https://i.postimg.cc/Jnn4H5cb/5.png"
+                        ]
 
         rightArrow.addEventListener("click", function () {
             if (contadorImagen < maxCantidadImagen) {
                 contadorImagen++    
-                imagenCarrusel.src = "./img/cabaret/carrusel1/" + contadorImagen + ".png"
+                imagenCarrusel.src = carrusel[contadorImagen - 1]
             }
             if (contadorImagen > 1) {
                 leftArrow.style.filter = "brightness(100%)"
@@ -79,7 +85,7 @@
         leftArrow.addEventListener("click", function () {
             if (contadorImagen > 1) {
                 contadorImagen--    
-                imagenCarrusel.src = "./img/cabaret/carrusel1/" + contadorImagen + ".png"
+                imagenCarrusel.src = carrusel[contadorImagen - 1]
             }
             if (contadorImagen < maxCantidadImagen) {
                 rightArrow.style.filter = "brightness(100%)"
