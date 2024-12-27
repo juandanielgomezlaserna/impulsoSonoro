@@ -95,15 +95,19 @@
 
         //carrusel imágenes
         let contadorImagen = 1
-        const maxCantidadImagen = 5
+        const maxCantidadImagen = 9
         const imagenCarrusel = document.querySelector(".imagen-carrusel")
         const leftArrow = document.querySelector(".arrow-left")
         const rightArrow = document.querySelector(".arrow-right")
-        const carrusel = ["https://i.postimg.cc/NMfL7cY2/1.png",
-                        "https://i.postimg.cc/Wzd3Cwd2/2.png",
-                        "https://i.postimg.cc/Lsv8sbf9/3.png",
-                        "https://i.postimg.cc/CKwKSgRr/4.png",
-                        "https://i.postimg.cc/Jnn4H5cb/5.png"
+        const carrusel = ["https://i.postimg.cc/QM9hpPg8/1.png",
+                        "https://i.postimg.cc/Wb5vxjXp/2.png",
+                        "https://i.postimg.cc/bwdhhMBx/3.png",
+                        "https://i.postimg.cc/RVSmPq1b/4.png",
+                        "https://i.postimg.cc/9QSjFp6v/5.png",
+                        "https://i.postimg.cc/85d84V7S/6.png",
+                        "https://i.postimg.cc/D079YYGb/7.png",
+                        "https://i.postimg.cc/brL7XH0V/8.png",
+                        "https://i.postimg.cc/zftp1t4g/9.png"
                         ]
 
         rightArrow.addEventListener("click", function () {
@@ -142,7 +146,7 @@
         const actor = document.querySelector(".actor")
         const actores = [
             `<div class="imagen">
-                <img src="./img/cabaret/carrusel2/andrea.png" alt="">
+                <img src="https://i.postimg.cc/1t3TGN1p/1.png" alt="">
             </div>
             <div class="info">
                 <h2>MADAM ROYALE</h2>
@@ -151,7 +155,7 @@
                 </p>
             </div>`,
             `<div class="imagen">
-                <img src="./img/cabaret/carrusel2/raul.png" alt="">
+                <img src="https://i.postimg.cc/HxvNBsTF/2.png" alt="">
             </div>
             <div class="info">
                 <h2>RAÚL</h2>
@@ -160,16 +164,16 @@
                 </p>
             </div>`,
             `<div class="imagen">
-                <img src="./img/cabaret/carrusel2/ruby.png" alt="">
+                <img src="https://i.postimg.cc/c1jj3H9n/3.png" alt="">
             </div>
             <div class="info">
                 <h2>RUBY</h2>
                 <p>
-                    Ruby, atrapada entre las sombras del pasado y el anhelo de libertad, emerge como un enigma fascinante. Su vida, marcada por dolor y miedo, no la define; es una rebelión. En el refugio de una familia matriarcal irreverente, descubre su cuerpo, su voz y su voluntad. Con sensualidad y desafío, desafía las normas, burlándose de los juicios mientras reclama su destino. Dile “Te quiero” y recibirás un adiós por anticipado. ¿Te atreves a mirar más allá?
+                    Ruby, atrapada entre las sombras del pasado y el anhelo de libertad, emerge como un enigma fascinante. Su vida, marcada por dolor y miedo, no la define; es una rebelión. En el refugio de una familia matriarcal irreverente, descubre su cuerpo, su voz y su voluntad. ¿Te atreves a mirar más allá?
                 </p>
             </div>`,
             `<div class="imagen">
-                <img src="./img/cabaret/carrusel2/romaroni.png" alt="">
+                <img src="https://i.postimg.cc/gjfTbSXD/4.png" alt="">
             </div>
             <div class="info">
                 <h2>ROMARONI</h2>
@@ -178,16 +182,16 @@
                 </p>
             </div>`,
             `<div class="imagen">
-                <img src="./img/cabaret/carrusel2/rawa.png" alt="">
+                <img src="https://i.postimg.cc/d37xXP13/5.png" alt="">
             </div>
             <div class="info">
                 <h2>RAWA</h2>
                 <p>
-                    Rawa, "Hija del fuego" en Quechua, arde con una pasión indomable. Luchadora incansable por los derechos de las mujeres, desafía las cadenas del pasado. Su familia le advertía: "No te cases con indio ni con negro", pero su sangre mestiza, española y afro, cuenta una historia más profunda. En Cabaret Pasiones De Mujer, su identidad se alza orgullosa. Sus rizos, antes reprimidos, ahora se liberan, celebrando su fuego interior sin temor alguno.
+                    Rawa, "Hija del fuego" en Quechua, arde con una pasión indomable. Desafía las cadenas del pasado. Su familia le advertía: "No te cases con indio ni con negro", pero su sangre mestiza, española y afro, cuenta una historia más profunda. En Cabaret Pasiones De Mujer, su identidad se alza orgullosa.
                 </p>
             </div>`,
             `<div class="imagen">
-                <img src="./img/cabaret/carrusel2/ragnar.png" alt="">
+                <img src="https://i.postimg.cc/TYDsJ6FH/6.png" alt="">
             </div>
             <div class="info">
                 <h2>RAGNAR</h2>
@@ -196,25 +200,25 @@
                 </p>
             </div>`,
             `<div class="imagen">
-                <img src="./img/cabaret/carrusel2/rozalen.png" alt="">
+                <img src="https://i.postimg.cc/TPRHxWwZ/7.png"" alt="">
             </div>
             <div class="info">
                 <h2>ROZALEN</h2>
                 <p>
-                    Rozalén, con sus raíces gauchas desvela un alma marcada por el vacío que ni el lujo pudo llenar, oculta tras su sonrisa seductora un pasado de sacrificios y migajas de afecto. Soñaba con príncipes mientras ofrecía su esencia a quienes no la merecían. Hoy, transformada en fuego indomable, se burla de las cadenas que la ataron, desafiando con su magnetismo y su enigmática verdad. ¿Te atreves a descubrir sus secretos?
+                    Rozalén, la mujer gaucha marcada por un vacío que ni el lujo llenó, oculta tras su sonrisa seductora un pasado de sacrificios y migajas de afecto. Hoy, convertida en fuego indomable, se burla de las cadenas del ayer, desafiando con su magnetismo y misterio. ¿Te atreves a descubrir sus secretos?
                 </p>
             </div>`,
             `<div class="imagen">
-                <img src="./img/cabaret/carrusel2/rahian.png" alt="">
+                <img src="https://i.postimg.cc/CxC694FG/8.png" alt="">
             </div>
             <div class="info">
                 <h2>RAHIAN</h2>
                 <p>
-                    Rozalén, con sus raíces gauchas desvela un alma marcada por el vacío que ni el lujo pudo llenar, oculta tras su sonrisa seductora un pasado de sacrificios y migajas de afecto. Soñaba con príncipes mientras ofrecía su esencia a quienes no la merecían. Hoy, transformada en fuego indomable, se burla de las cadenas que la ataron, desafiando con su magnetismo y su enigmática verdad. ¿Te atreves a descubrir sus secretos?
+                    Rahian, espíritu libre forjado por la arena y el viento, transforma el silencio de la guerra en un canto a la vida. Con la inocencia de un huérfano sin raíces, convirtió soledad y migajas en sonrisas. Hoy, su voz resuena en canciones que abrazan dolor y esperanza. Su historia invita a descubrir cómo una vida rota puede florecer en arte. ¿Podrás resistir su voz?
                 </p>
             </div>`,
             `<div class="imagen">
-                <img src="./img/cabaret/carrusel2/pinky.png" alt="">
+                <img src="https://i.postimg.cc/q7jDvM6g/9.png" alt="">
             </div>
             <div class="info">
                 <h2>PINKY ROSE</h2>
