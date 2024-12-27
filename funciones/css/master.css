@@ -20,7 +20,7 @@ body{
 }
 
 .titulo-h{
-    color: #BD9519;
+    color: #EDCA52;
 }
 
 hr.linea{
@@ -48,10 +48,11 @@ header{
         width: 282px;
         height: 108px;
     }
-    a{
+    a.titulo-h{
         text-decoration: none;
         transition: all 0.3s ease-in;
         font-size: 20px;
+        color: #BD9519;
         &:hover{
             color: #ebcb4c;
         }
@@ -66,7 +67,7 @@ header{
 
 @media (max-width: 480px) {
     header{
-        a{
+        a.titulo-h{
             font-size: 15px;
         }
         div.sections{
