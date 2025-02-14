@@ -4,47 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Impulso Sonoro</title>
-    <link rel="stylesheet" href="./css/master.css">
+    <link rel="stylesheet" href="./css/master2.css">
 </head>
 <body>
+    <header>
+        <img src="./img/logo.svg" alt="">
+        <hr>
+        <div class="sections">
+            <a class="titulo-h" href="#funciones">FUNCIONES</a>
+            <a class="titulo-h" href="#talentos">TALENTOS</a>
+            <a class="titulo-h" href="#nosotros">NOSOTROS</a>
+            <a class="titulo-h" href="#contacto">CONTACTO</a>
+        </div>
+    </header>
     <main>
-        <header>
-            <img class="logo" src="./img/logo.svg" alt="">
-            <hr class="linea">
-        </header> 
         <section class="novedad">
-            <div>
-                <img class="img-novedad" src="" alt="">
-                <a href="./funciones/cabaret.html">MÁS INFO</a>
-            </div>
+            <img src="./img/img-1.png" alt="">
+            <a href="/funciones/cabaret.html">MÁS INFO</a>
+            <hr>
         </section>
     </main>
-    <script>
-        const imgNovedad = document.querySelector(".img-novedad")
-        const mediaQuery = window.matchMedia('(max-width: 800px)');
-
-        if (window.innerWidth <= 800) {
-            imgNovedad.src = "./img/img-1-phone.png"
-            imgNovedad.style.width = "100%"
-            imgNovedad.zIndex = "100"
-        }else{
-            imgNovedad.src = "./img/img-1.png"
-            imgNovedad.style.width = "auto"
-            imgNovedad.zIndex = "100"
-        }
-
-        function handleMediaQueryChange(e) {
-            if (e.matches) { 
-                imgNovedad.src = "./img/img-1-phone.png"
-                imgNovedad.style.width = "100%"
-            }else{
-                imgNovedad.src = "./img/img-1.png"
-                imgNovedad.style.width = "auto"
-            }
-        }
-
-        mediaQuery.addListener(handleMediaQueryChange);
-
-    </script>
 </body>
 </html>
