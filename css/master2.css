@@ -12,6 +12,7 @@
 body{
     background-color: #141414;
     background-image: url("../img/BG1.png");
+    background-size: 100%;
 }
 
 hr{
