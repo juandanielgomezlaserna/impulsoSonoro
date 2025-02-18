@@ -93,9 +93,38 @@ section.novedad{
         }
     }
 
+    
     hr{
         width: 60%;
         min-width: 800px;
+    }
+}
+
+section.carrusel-sect{
+    margin-top: 2rem;
+    padding: 4rem;
+    div.carrusel-titulo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        hr{
+            width: 50%;
+        }
+    }
+    div.imagenes{
+        margin-top: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        img.imagen-carrusel{
+            width: 40%;
+            height: auto;
+        }
+        a{
+            cursor: pointer;
+        }
     }
 }
 
@@ -105,9 +134,16 @@ section.novedad{
             display: none;
         }
     }
-    section.novedad{
-        img{
-            
+    section.carrusel-sect{
+        padding: 0rem;
+        div.imagenes{
+            padding: 0;
+            img.imagen-carrusel{
+                width: 50%;
+            }
+        }
+        a{
+            zoom: 0.7;
         }
     }
 }

@@ -23,6 +23,58 @@
             <a href="/funciones/cabaret.html">MÁS INFO</a>
             <hr>
         </section>
+        <section class="carrusel-sect">
+            <div class="carrusel-titulo">
+                <h2 class="titulo-h">FUNCIONES</h2>
+                <hr>
+            </div>
+            <div class="carrusel">
+                <div class="imagenes">
+                    <a class="arrow-left">
+                        <img src="./img/carrusel/arrow-left.png" alt="">
+                    </a>
+                    <img class="imagen-carrusel" src="./img//carrusel/target-1.png" alt="">
+                    <a class="arrow-right">
+                        <img src="./img/carrusel/arrow-right.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
+    <script>
+        const imgCarrusel = document.querySelector(".imagen-carrusel")
+        const arrowLeft = document.querySelector(".arrow-left")
+        const arrowRight = document.querySelector(".arrow-right")
+        var indexCarrusel = 1
+        arrowLeft.style.opacity = "0.5"
+        arrowLeft.style.cursor = "auto"
+
+        arrowLeft.addEventListener("click", function(){
+            if (indexCarrusel > 1) {
+                indexCarrusel--
+                imgCarrusel.src = "/img/carrusel/target-" + indexCarrusel + ".png"
+                arrowRight.style.opacity = "1"
+                arrowRight.style.cursor = "pointer"
+                if (indexCarrusel == 1) {
+                    arrowLeft.style.opacity = "0.5"
+                    arrowLeft.style.cursor = "auto"
+                }
+            }
+        })
+        
+        arrowRight.addEventListener("click", function(){
+            if (indexCarrusel < 7) {
+                indexCarrusel++
+                arrowLeft.style.opacity = "1"
+                arrowLeft.style.cursor = "pointer"
+                imgCarrusel.src = "/img/carrusel/target-" + indexCarrusel + ".png"
+                if (indexCarrusel == 7) {
+                    arrowRight.style.opacity = "0.5"
+                    arrowRight.style.cursor = "auto"
+                }
+            }
+        })
+
+    </script>
 </body>
 </html>
