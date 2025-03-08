@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabaret</title>
+    <link rel="stylesheet" href="./css/master.css">
+    <link rel="stylesheet" href="./css/cabaret.css">
+</head>
+<body>
+    <main>
+        <header>
+            <img class="logo" src="./img/cabaret/cabaret-logo.svg" alt="">
+            <hr class="linea">
+            <div class="sections">
+                <a class="titulo-h" href="#cabaret">EL CABARET</a>
+                <a class="titulo-h" href="#imagenes">IMÁGENES</a>
+                <a class="titulo-h" href="#actores">ACTORES</a>
+                <a class="titulo-h" href="#informacion">INFORMACIÓN</a>
+            </div>
+        </header>
+        <section id="cabaret" class="cabaret">
+            <div class="titulo-div">
+                <h2 class="titulo-h">EL CABARET</h2>
+                <hr class="linea">
+            </div>
+            <div>
+                <img src="./img/cabaret/elcabaret.png" alt="">
+                <div>
+                    <p>
+                        Cabaret Pasiones de Mujer, cuenta la historia de personajes que han sido juzgados de manera intrínseca a lo largo de su vida, cuenta con esos mitos que se desvanecen cuando nos acercamos en el siglo XXI. Las declaraciones de sus personajes sin distinción, procuran la ternura y la empatía social genuina, vinculando elementos sensuales, cómicos, y musicales. 
+                    </p>
+                    <p>
+                        Cabaret es un refugio para hombres y mujeres, para la diversión y reflexión, es un lugar de arte y liberación, que integra la sátira en presentación de stand-up comedy, contando con libretos que identifican de forma profunda a cada espectador.
+                    </p>
+                    <p>
+                        Cada personaje llega a refugiarse en el hogar de la Madam, en el cual pueden ser aceptados y amados naturalmente.
+                    </p>
+                    <a href="#informacion">RESERVA TU BOLETA AQUÍ</a>
+                </div>
+            </div>
+        </section>
+        <section id="imagenes" class="imagenes">
+            <div class="titulo-div">
+                <h2 class="titulo-h">IMÁGENES</h2>
+                <hr class="linea">
+            </div>
+            <div class="carrusel">
+                <img class="imagen-carrusel" src="https://i.postimg.cc/NMfL7cY2/1.png" alt="">
+                <div class="buttons">
+                    <button class="arrow-left"></button>
+                    <button class="arrow-right"></button>
+                </div>
+            </div>
+        </section>
+        <section id="actores" class="actores">
+            <div class="titulo-div">
+                <h2 class="titulo-h">ACTORES</h2>
+                <hr class="linea">
+            </div>
+            <div class="carrusel-actores">
+                <div class="actor">
+                    <div class="imagen">
+                        <img src="./img/cabaret/carrusel2/andrea.png" alt="">
+                    </div>
+                    <div class="info">
+                        <h2>MADAM ROYALE</h2>
+                        <p>
+                            Madam Royale, un enigma de terciopelo y luces de cabaret, protege a su familia con amor feroz y astucia. Su voz, impregnada de pasión y pérdida, suaviza secretos que se esconden tras su mirada, siempre acompañados con un buen vino. Un nombre la delata: Raúl. Al susurrarlo, el aire se carga de tensión. ¿Amor, rencor o un pacto oculto? Nadie lo sabe, pero quien intente descubrirlo quedará atrapado en su silencio y su misterio.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="arrow-left-actor"></button>
+                <button class="arrow-right-actor"></button>
+            </div>
+        </section>
+        <section class="informacion" id="informacion">
+            <div class="informacion">
+                <h2 class="titulo-h">INFORMACIÓN</h2>
+                <h3>6 Y 7 DE ENERO - 10:00 P.M.</h3>
+                <h3 class="safari">SAFARI DISCO CLUB</h3>
+            </div>
+            <div class="informacion">
+                <h2 class="titulo-h">RESERVAS</h2>
+                <h3 class="cel-1">311 362 0873</h3>
+                <h3 class="cel-2">310 646 7296</h3>
+            </div>
+            <a target="_blank" href="https://tuboleta.com/es/eventos/cabaret-pasiones-de-mujer">TUBOLETA.COM</a>
+            <img src="https://i.postimg.cc/sgzrsjMF/Group-1.png" alt="">
+        </section>
+    </main>
+    <script>
+
+        //carrusel imágenes
+        let contadorImagen = 1
+        const maxCantidadImagen = 9
+        const imagenCarrusel = document.querySelector(".imagen-carrusel")
+        const leftArrow = document.querySelector(".arrow-left")
+        const rightArrow = document.querySelector(".arrow-right")
+        const carrusel = ["https://i.postimg.cc/QM9hpPg8/1.png",
+                        "https://i.postimg.cc/Wb5vxjXp/2.png",
+                        "https://i.postimg.cc/bwdhhMBx/3.png",
+                        "https://i.postimg.cc/RVSmPq1b/4.png",
+                        "https://i.postimg.cc/9QSjFp6v/5.png",
+                        "https://i.postimg.cc/85d84V7S/6.png",
+                        "https://i.postimg.cc/D079YYGb/7.png",
+                        "https://i.postimg.cc/brL7XH0V/8.png",
+                        "https://i.postimg.cc/zftp1t4g/9.png"
+                        ]
+
+        rightArrow.addEventListener("click", function () {
+            if (contadorImagen < maxCantidadImagen) {
+                contadorImagen++    
+                imagenCarrusel.src = carrusel[contadorImagen - 1]
+            }
+            if (contadorImagen > 1) {
+                leftArrow.style.filter = "brightness(100%)"
+                leftArrow.style.cursor = "pointer"
+            }
+            if (contadorImagen == maxCantidadImagen) {
+                rightArrow.style.filter = "brightness(50%)"
+                rightArrow.style.cursor = "no-drop"
+            }
+        })
+
+        leftArrow.addEventListener("click", function () {
+            if (contadorImagen > 1) {
+                contadorImagen--    
+                imagenCarrusel.src = carrusel[contadorImagen - 1]
+            }
+            if (contadorImagen < maxCantidadImagen) {
+                rightArrow.style.filter = "brightness(100%)"
+                rightArrow.style.cursor = "pointer"
+            }
+            if (contadorImagen == 1) {
+                leftArrow.style.filter = "brightness(50%)"
+                leftArrow.style.cursor = "no-drop"
+            }
+        })
+
+        //carrusel actores
+        let contadorImagenActores = 1
+        let maxCantidadImagenActores = 9
+        const actor = document.querySelector(".actor")
+        const actores = [
+            `<div class="imagen">
+                <img src="https://i.postimg.cc/1t3TGN1p/1.png" alt="">
+            </div>
+            <div class="info">
+                <h2>MADAM ROYALE</h2>
+                <p>
+                    Madam Royale, un enigma de terciopelo y luces de cabaret, protege a su familia con amor feroz y astucia. Su voz, impregnada de pasión y pérdida, suaviza secretos que se esconden tras su mirada, siempre acompañados con un buen vino. Un nombre la delata: Raúl. Al susurrarlo, el aire se carga de tensión. ¿Amor, rencor o un pacto oculto? Nadie lo sabe, pero quien intente descubrirlo quedará atrapado en su silencio y su misterio.
+                </p>
+            </div>`,
+            `<div class="imagen">
+                <img src="https://i.postimg.cc/HxvNBsTF/2.png" alt="">
+            </div>
+            <div class="info">
+                <h2>RAÚL</h2>
+                <p>
+                    Raúl es un soldado al servicio de su patria, con una figura imponente que inspira respeto y temor. Pero bajo esa coraza se oculta un hombre atormentado, un poeta y cantor atrapado en su propia contradicción. Su corazón late por un amor que lo consume, una verdad que lo tienta a abandonar todo. ¿Será su sacrificio más valioso que el deseo de ser auténtico? O quizás, el peso de su deber terminará silenciando la melodía de su alma.
+                </p>
+            </div>`,
+            `<div class="imagen">
+                <img src="https://i.postimg.cc/c1jj3H9n/3.png" alt="">
+            </div>
+            <div class="info">
+                <h2>RUBY</h2>
+                <p>
+                    Ruby, atrapada entre las sombras del pasado y el anhelo de libertad, emerge como un enigma fascinante. Su vida, marcada por dolor y miedo, no la define; es una rebelión. En el refugio de una familia matriarcal irreverente, descubre su cuerpo, su voz y su voluntad. ¿Te atreves a mirar más allá?
+                </p>
+            </div>`,
+            `<div class="imagen">
+                <img src="https://i.postimg.cc/gjfTbSXD/4.png" alt="">
+            </div>
+            <div class="info">
+                <h2>ROMARONI</h2>
+                <p>
+                    Romaroni desciende de las supremas aristocracias: sangre azul, alma huraña, vientre infecundo. Su figura andrógina destila un magnetismo inquietante, donde virilidad y feminidad se entrelazan en un juego de curiosidades irresistibles. Es ese misterio en las masculinidades ambiguas lo que siempre logra enamorarte, dejándote al borde de lo conocido.
+                </p>
+            </div>`,
+            `<div class="imagen">
+                <img src="https://i.postimg.cc/d37xXP13/5.png" alt="">
+            </div>
+            <div class="info">
+                <h2>RAWA</h2>
+                <p>
+                    Rawa, "Hija del fuego" en Quechua, arde con una pasión indomable. Desafía las cadenas del pasado. Su familia le advertía: "No te cases con indio ni con negro", pero su sangre mestiza, española y afro, cuenta una historia más profunda. En Cabaret Pasiones De Mujer, su identidad se alza orgullosa.
+                </p>
+            </div>`,
+            `<div class="imagen">
+                <img src="https://i.postimg.cc/TYDsJ6FH/6.png" alt="">
+            </div>
+            <div class="info">
+                <h2>RAGNAR</h2>
+                <p>
+                    Ragnar, un imán de deseo, con una figura perfecta y movimientos que encienden la habitación. Pero detrás de su sensualidad ardiente, yace un alma profunda, tan existencial como esencial para el Cabaret. Es un enigma que provoca tanto como cautiva, dejando siempre ganas de más.
+                </p>
+            </div>`,
+            `<div class="imagen">
+                <img src="https://i.postimg.cc/TPRHxWwZ/7.png"" alt="">
+            </div>
+            <div class="info">
+                <h2>ROZALEN</h2>
+                <p>
+                    Rozalén, la mujer gaucha marcada por un vacío que ni el lujo llenó, oculta tras su sonrisa seductora un pasado de sacrificios y migajas de afecto. Hoy, convertida en fuego indomable, se burla de las cadenas del ayer, desafiando con su magnetismo y misterio. ¿Te atreves a descubrir sus secretos?
+                </p>
+            </div>`,
+            `<div class="imagen">
+                <img src="https://i.postimg.cc/CxC694FG/8.png" alt="">
+            </div>
+            <div class="info">
+                <h2>RAHIAN</h2>
+                <p>
+                    Rahian, espíritu libre forjado por la arena y el viento, transforma el silencio de la guerra en un canto a la vida. Con la inocencia de un huérfano sin raíces, convirtió soledad y migajas en sonrisas. Hoy, su voz resuena en canciones que abrazan dolor y esperanza. Su historia invita a descubrir cómo una vida rota puede florecer en arte. ¿Podrás resistir su voz?
+                </p>
+            </div>`,
+            `<div class="imagen">
+                <img src="https://i.postimg.cc/q7jDvM6g/9.png" alt="">
+            </div>
+            <div class="info">
+                <h2>PINKY ROSE</h2>
+                <p>
+                    Enamoradiza, cómica y descontrolada, es una chispa que enciende todo a su paso. Pero detrás de su risa desenfrenada, conviven las sombras de una memoria que la atormenta. En Cabaret Pasiones De Mujer, finalmente rompe su silencio, dejando al descubierto una verdad tan ardiente como su espíritu.
+                </p>
+            </div>`
+        ]
+        const leftActor = document.querySelector(".arrow-left-actor")
+        const rightActor = document.querySelector(".arrow-right-actor")
+
+        rightActor.addEventListener("click", function () {
+            if (contadorImagenActores < maxCantidadImagenActores) {
+                contadorImagenActores++
+                actor.innerHTML = actores[contadorImagenActores - 1]
+            }
+            if (contadorImagenActores > 1) {
+                leftActor.style.filter = "brightness(100%)"
+                leftActor.style.cursor = "pointer"
+            }
+            if (contadorImagenActores == maxCantidadImagenActores) {
+                rightActor.style.filter = "brightness(50%)"
+                rightActor.style.cursor = "no-drop"
+            }
+        })
+
+        leftActor.addEventListener("click", function () {
+            if (contadorImagenActores > 1) {
+                contadorImagenActores--    
+                actor.innerHTML = actores[contadorImagenActores - 1]
+            }
+            if (contadorImagenActores < maxCantidadImagenActores) {
+                rightActor.style.filter = "brightness(100%)"
+                rightActor.style.cursor = "pointer"
+            }
+            if (contadorImagenActores == 1) {
+                leftActor.style.filter = "brightness(50%)"
+                leftActor.style.cursor = "no-drop"
+            }
+        })
+    </script>
+</body>
+</html>
