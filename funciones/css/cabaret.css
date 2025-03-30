@@ -2,8 +2,10 @@
 
 body{
     background: url("../img/cabaret/bg1.png") #0D0D0D;
-    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: 0 0;
+    background-attachment: fixed;
 }
 
 p{
@@ -63,6 +65,43 @@ section.imagenes{
     }
 }
 
+section.actores{
+    width: 100%;
+    .actor{
+        width: 80%;
+        height: 700px;
+        margin: 2rem auto;
+        background-color: #0d0d0d9d;
+        border-radius: 0 3rem 3rem 0;
+        display: flex;
+        box-shadow: 0 0 40px 1px #ebcb4c7e;
+    }
+    .img-actor{
+        background: url("../img/cabaret/carrusel2/andrea.png") center no-repeat;
+        background-size: cover;
+        width: 30%;
+        height: 100%;
+    }
+    .info-actor{
+        width: 65%;
+        padding: 1rem;
+        margin: auto auto;
+
+        h2{
+            color: #D9D9D9;
+            font-size: 4vw;
+        }
+        p{
+            font-size: 1.5vw;
+        }
+    }
+    .buttons{
+        margin: 0 auto;
+        width: 80%;
+        justify-content: start;
+    }
+}
+
 @media (max-width: 1000px){
     div#cabaret{
         flex-direction: column;
@@ -100,12 +139,45 @@ section.imagenes{
             transform: scale(0.8);
         }
     }
+    section.actores{
+        .actor{
+            height: 400px;
+        }
+        .img-actor{
+            width: 30vw;
+            background-size: cover;
+        }
+        .info-actor{
+            h2{
+                font-size: 4.5vw;
+            }
+            p{
+                font-size: 2vw;
+            }
+        }
+        div.buttons{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            transform: scale(0.8);
+        }
+    }
 }
 
 @media (max-width: 500px){
     section.imagenes{
         img{
             height: auto;
+        }
+    }
+    section.actores{
+        .actor{
+            height: 50vw;
+            width: 95%;
+        }
+        .img-actor{
+            width: 40vw;
         }
     }
 }

@@ -28,9 +28,9 @@
             <img class="w-[50%] ml-[7rem]" src="./img/cabaret/elcabaret.jpg" alt="">
             <div>
                 <p>
-                    Cabaret pasiones de mujer es un Show músico - teatral. Integra la comedia la danza y el stand up comedy. Cuenta historias reales y reflexivas donde  todos los espectadores; hombres, mujeres y diversidad, se refugian y divierten gracias a lo novedoso de sus libretos  ineditos y potenciales talentos de su elenco.
+                    "Cabaret Pasiones de Mujer" es un show músico-teatral que integra la comedia, la danza y el stand-up comedy. Presenta historias reales y reflexivas en las que todos los espectadores hombres, mujeres y población diversa se sienten identificados y se divierten gracias a la originalidad de sus libretos inéditos y al talento de su elenco.
                 </p>
-                <a href="#informacion">RESERVA TU BOLETA AQUÍ</a>
+                <!-- <a href="#informacion">RESERVA TU BOLETA AQUÍ</a> -->
             </div>
         </div>
     </section>
@@ -55,6 +55,25 @@
             </div>
         </div>
     </section>
+    <section class="actores">
+        <div class="titulo-div">
+            <h2 class="titulo-h">ACTORES</h2>
+            <hr class="linea">
+        </div>
+        <div class="actor">
+            <div class="img-actor"></div>
+            <div class="info-actor">
+                <h2>MADAM ROYALE</h2>
+                <p>
+                    Madam Royale es una mujer envuelta en un enigma de terciopelo y luces de cabaret. Protege a los suyos con ferocidad y astucia; su voz, impregnada de pasión, suaviza y esconde secretos. Siempre va acompañada de un buen vino. ¿Qué secreto oculta y la mantiene atrapada en su silencio y misterio?
+                </p>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="arrow-left2 opacity-50">&lt;</button>
+            <button class="arrow-right2">></button>
+        </div>
+    </section>
     <script>
         //elements
         const btnNext = document.querySelector(".arrow-right")
@@ -62,7 +81,8 @@
         const img = document.querySelectorAll(".img")
         let contador = 0
         numMax = 5
-
+        
+        
         //events
         btnNext.addEventListener("click", function(){
             if (contador <= numMax) {
@@ -87,6 +107,84 @@
                 }
             }
         })
+        
+        // actores
+        //elements
+        const next = document.querySelector(".arrow-right2")
+        const prev = document.querySelector(".arrow-left2")
+        const imgCarrusel = document.querySelector(".img-actor")
+        const infoCarrusel = document.querySelector(".info-actor p")
+        const tituloCarrusel = document.querySelector(".info-actor h2")
+        
+        let actores = [
+            "andrea",
+            "pinky",
+            "ragnar",
+            "rahian",
+            "raul",
+            "rawa",
+            "romaroni",
+            "rozalen",
+            "ruby"
+        ]
+
+        let infoActores = [
+            "Madam Royale es una mujer envuelta en un enigma de terciopelo y luces de cabaret. Protege a los suyos con ferocidad y astucia; su voz, impregnada de pasión, suaviza y esconde secretos. Siempre va acompañada de un buen vino. ¿Qué secreto oculta y la mantiene atrapada en su silencio y misterio?",
+            "Enamoradiza, cómica y descontrolada, es una chispa no se puede contener. Pero detrás de su risa desenfrenada, conviven las sombras de una memoria que la atormenta. En Cabaret Pasiones De Mujer, finalmente rompe su silencio, dejando al descubierto una verdad tan repentina como su danza impactante.",
+            "Ragnar, un imán de deseo, con una figura perfecta y movimientos que encienden la habitación. Pero detrás de su sensualidad ardiente, yace un alma profunda, tan existencial como esencial para el Cabaret. Es un enigma que provoca tanto como cautiva, dejando siempre ganas de más.",
+            "Rahian, espíritu libre forjado por la arena y el viento, transforma el silencio de la guerra en un canto a la vida. Con la inocencia de un huérfano sin raíces, convirtió soledad y migajas en sonrisas. Hoy, su voz resuena en canciones que abrazan dolor y esperanza. Su historia invita a descubrir cómo una vida rota puede florecer en arte. ¿Podrás resistir su voz?",
+            "Raúl es un soldado al servicio de su patria, con una figura imponente que inspira respeto y temor. Pero, ¿qué oculta bajo esa coraza ligeramente atormentada? ¿Acaso un poeta y cantor atrapado en su propia contradicción?",
+            'Rawa, "Hija del fuego" en Quechua, arde con una pasión indomable. Luchadora incansable por los derechos de las mujeres, desafía las cadenas del pasado. Su familia le advertía: "No te cases con indio ni con negro", pero su sangre mestiza, española y afro, cuenta una historia más profunda. En Cabaret Pasiones De Mujer, su identidad se alza orgullosa.',
+            'Romaroni desciende de las supremas aristocracias: sangre azul, alma huraña, vientre infecundo. Su figura andrógina destila un magnetismo inquietante, donde virilidad y feminidad se entrelazan en un juego de curiosidades irresistibles. Es ese misterio en las masculinidades ambiguas lo que siempre logra enamorarte, dejándote al borde de lo conocido.',
+            'Rozalén, un alma marcada por el vacío que ni el lujo pudo llenar, oculta tras su sonrisa seductora un pasado de sacrificios y migajas de afecto. Soñaba con príncipes mientras ofrecía su esencia a quienes no la merecían. Hoy, transformada en fuego indomable, se burla de las cadenas que la ataron, desafiando con su magnetismo y su enigmática verdad. ¿Te atreves a descubrir sus secretos?',
+            'Ruby, atrapada entre las sombras del pasado y el anhelo de libertad, emerge como un enigma fascinante. Su vida, marcada por dolor y miedo, no la define; es una rebelión. En el refugio de una familia matriarcal irreverente, descubre su cuerpo, su voz y su voluntad. ¿Te atreves a mirar más allá?'
+        ]
+
+        let nombreActores = [
+            "MADAM ROYALE",
+            "PINKY ROSE",
+            "RAGNAR",
+            "RAHIAN",
+            "RAÚL",
+            "RAWA",
+            "ROMARONI",
+            "ROZALEN",
+            "RUBY"
+        ]
+        let countCarrusel = 0
+        let maxCarrusel = actores.length - 1
+
+        next.addEventListener("click", () =>{
+            if (countCarrusel < maxCarrusel) {
+                countCarrusel++
+                actualizarCarrusel(countCarrusel)
+                prev.classList.add("opacity-100")
+                prev.classList.remove("opacity-50")
+                if (!(countCarrusel < maxCarrusel)) {
+                    next.classList.add("opacity-50")
+                    next.classList.remove("opacity-100")
+                }
+            }
+        })
+
+        prev.addEventListener("click", () =>{
+            if (countCarrusel > 0) {
+                countCarrusel--
+                actualizarCarrusel(countCarrusel)
+                next.classList.add("opacity-100")
+                next.classList.remove("opacity-50")
+                if (!(countCarrusel > 0)) {
+                    prev.classList.add("opacity-50")
+                    prev.classList.remove("opacity-100")
+                }
+            }
+        })
+
+        function actualizarCarrusel(index){
+            imgCarrusel.style.backgroundImage = `url('./img/cabaret/carrusel2/${actores[index]}.png')`
+            infoCarrusel.textContent = infoActores[index]
+            tituloCarrusel.textContent = nombreActores[index]
+        }
     </script>
 </body>
 </html>
